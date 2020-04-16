@@ -1,7 +1,6 @@
 .wrapper
-- if user_signed_in?
+-if user_signed_in?
   = render "side_bar"
   = render "main_chat"
 - else
-  = render 'top'
-
+  = render "create"

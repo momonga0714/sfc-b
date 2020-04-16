@@ -1,0 +1,20 @@
+%html.top__html{:lang => "ja"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "width=device-width,initial-scale=1.0,minimum-scale=1.0", :name => "viewport"}/
+    %title suginami football clab
+    %link{:href => "http://fonts.googleapis.com/css?family=Raleway:700,400", :rel => "stylesheet"}/
+    %link{:href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+  %body.top__body
+    %section#contact.contact
+      %h3.heading CONTACT
+      .contact-form
+        = form_for [@group,@message] do |f|
+          = f.text_area :content, class: 'input-text', placeholder: 'お名前・ご連絡先とメッセージを入力して下さい'
+          = f.hidden_field :user_id, :value => 1
+          = f.submit 'Send', class: 'submit-btn'
+    %footer.footer
+      = link_to root_path do
+        ="NPO法人　杉並フットボールクラブ"
+      

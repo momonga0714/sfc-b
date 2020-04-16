@@ -14,7 +14,7 @@
       %p.site-description Check out some of my team.
       .buttons
         %a.button{:href => "/users/sign_up"} Staff Only
-        %a.button.button-showy{:href => "#contact"} SEND MESSAGE
+        %a.button.button-showy{:href => "/groups/1/messages"} SEND MESSAGE
     %section#about.about
       %h3.heading 活動目的
       %p.about-text
@@ -130,11 +130,5 @@
             %br/
             是非一度お問い合わせください。
     %section#contact.contact
-      %h3.heading CONTACT
-      .contact-form
-        = form_for [@group,@message] do |f|
-          = f.text_area :content, class: 'top-input-text', placeholder: 'お名前・ご連絡先とメッセージを入力して下さい'
-          = f.hidden_field :user_id, :value => 1
-          = f.submit 'Send', class: 'submit-btn'
     %footer.footer
       NPO法人　杉並フットボールクラブ

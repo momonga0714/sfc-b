@@ -1,2 +1,5 @@
 .wrapper
+- if user_signed_in?
   = render "messages/side_bar"
+- else
+  = render 'messages/top'

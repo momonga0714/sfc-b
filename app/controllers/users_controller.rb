@@ -11,13 +11,12 @@ class UsersController < ApplicationController
   end
   
   def edit
-    
   end
 
   def destroy
     user = find(params[:id])
     user.destroy
-    redirect_to root_path
+    redirect_to groups_path
   end
 
   def update

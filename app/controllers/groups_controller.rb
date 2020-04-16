@@ -1,8 +1,10 @@
 class GroupsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index,:create]
+  before_action :set_message
   
   def index
-    @group = Group.includes(:user)
+    @groups = Group.includes(:user)
+    @group = Group.new
   end
 
   def new
@@ -35,5 +37,8 @@ class GroupsController < ApplicationController
   private
   def group_params
     params.require(:group).permit(:name, user_ids: [])
+  end
+  def set_message
+    
   end
 end
