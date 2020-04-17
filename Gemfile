@@ -52,11 +52,12 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
-  
+  gem 'sqlite3'
 end
 
 group :production do
   gem 'unicorn', '5.4.1'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
