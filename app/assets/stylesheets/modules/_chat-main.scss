@@ -6,7 +6,6 @@
   float: right;
   
   .main-header{
-    width: calc(100vw - 300px);
     height: 100px;
     background-color: #ffffff;
     display: flex;
@@ -125,5 +124,21 @@
         margin-left: 15px;
       }
     }
+  }
+}
+/* --------------------------------
+ * smart phone
+ * -------------------------------- */
+ @media (max-width: 768px) {
+  .chat-main{
+    width: calc(100% - 180px);
+  }
+  .main-header{
+    margin-right: 0;
+  }
+  .main-footer{
+    width: 100%;
+    position: absolute;
+    left: 0;
   }
 }

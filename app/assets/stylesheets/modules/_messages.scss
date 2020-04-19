@@ -36,7 +36,6 @@
     }
   }
   .groups{
-    width: 300px;
     height: calc(100vh - 100px);
     background-color: #0099FF;
     padding-top:20px;
@@ -59,5 +58,18 @@
         margin-top: 5px;
       }
     }
+  }
+}
+/* --------------------------------
+ * smart phone
+ * -------------------------------- */
+@media (max-width: 768px) {
+
+  .chat-side{
+    width: 180px;
+  }
+  .groups{
+    overflow: scroll;
+
   }
 }
