@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :name, presence: true, uniqueness: true
-  has_many :group_users
-  has_many :groups, through: :group_users
-  has_many :messages
+  has_many :group_users, dependent: :destroy
+  has_many :groups, through: :group_users, foreign_key: :user_id, dependent: :destroy
+  has_many :messages, foreign_key: :user_id, dependent: :destroy
 end

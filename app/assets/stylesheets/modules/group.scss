@@ -109,4 +109,32 @@ li {
 .chat-group-form .chat-group-user .chat-group-user__btn {
   float: right;
 }
+/* --------------------------------
+ * smart phone
+ * -------------------------------- */
+ @media (max-width: 768px) {
 
+  .chat-group-form{
+    width: 100%;
+    font-size: 18px;
+  }
+  .chat-group-form__field--right{
+    float: none;
+    width: 100%;
+  }
+  .chat-group-form__label{
+    font-weight: normal;
+    text-align: left;
+  }
+  .chat-group-form__field--left{
+    width: 100%;
+    padding-left: 0;
+  }
+  .chat-group-form__field--right{
+    text-align: center;
+  }
+  .chat-group-form__field--left{
+
+  }
+  
+}

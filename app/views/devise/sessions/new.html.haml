@@ -1,9 +1,16 @@
+%head
+  %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %meta{:charset => "UTF-8"}/
+  %meta{:content => "width=device-width,initial-scale=1.0,minimum-scale=1.0", :name => "viewport"}/
+  %title suginami football clab
+  %link{:href => "http://fonts.googleapis.com/css?family=Raleway:700,400", :rel => "stylesheet"}/
+  %link{:href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", :rel => "stylesheet"}/
 #account-page.account-page
   .account-page__inner.clearfix
     .account-page__inner--left.account-page__header
       %h2 Log in
       %h5 登録しているユーザーでログイン
-      = render "devise/shared/links"
+      
     .account-page__inner--right.user-form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field
@@ -19,3 +26,4 @@
               = f.password_field :password, autocomplete: "off"
           .actions
             = f.submit "Log in", class: 'btn'
+          = render "devise/shared/links"

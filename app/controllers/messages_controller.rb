@@ -27,6 +27,12 @@ class MessagesController < ApplicationController
     end
   end
 
+  def destroy
+    @message =  @group.messages.find(params[:id])
+    @message.destroy
+    redirect_to groups_paath
+  end
+
   private
   def message_params
     params.require(:message).permit(:content,:image,:user_id)

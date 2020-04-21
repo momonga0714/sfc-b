@@ -38,6 +38,7 @@
     }
     .header-right{
       margin-top: 28px;
+      display: flex;
       .edit-btn{
         font-size: 16px;
         height: 40px;
@@ -46,6 +47,20 @@
         border: 1px solid #38aef0;
         text-align: center;
         cursor: pointer;
+        a{
+          text-decoration: none;
+          color: #38aef0;
+        }
+      }
+      .delete-btn{
+        font-size: 16px;
+        height: 40px;
+        width: 72px;
+        line-height: 40px;
+        border: 1px solid #38aef0;
+        text-align: center;
+        cursor: pointer;
+        margin-left: 20px;
         a{
           text-decoration: none;
           color: #38aef0;
@@ -141,4 +156,25 @@
     position: absolute;
     left: 0;
   }
+  .chat-main .main-header{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .chat-main .main-header .header-right {
+    margin-top: 10px;
+    display: block;
+  }
+  .chat-main .main-header .header-right .delete-btn {
+    margin-top: 5px;
+    margin-left: 0px;
+  }
+  .chat-main .messages .message img{
+    width: 100%;
+  }
+  .chat-main .messages{
+    padding: 23px 20px;
+  }
+
+
+
 }

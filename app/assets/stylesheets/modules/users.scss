@@ -47,6 +47,7 @@
       font-size: 14px;
     }
   }
+  
 
   .field {
     margin-bottom: 10px;
@@ -139,3 +140,66 @@
     font-size: 13px;
   }
 }
+
+.account-page .btn {
+  margin-top: 20px;
+  color: #fff;
+  background-color: #ccc;
+  
+}
+
+.account-page input[type='submit'] {
+  margin-right: 40px;
+}
+
+/* --------------------------------
+ * smart phone
+ * -------------------------------- */
+ @media (max-width: 768px) {
+
+  .account-page .account-page__inner{
+    width: 100%;
+    font-size: 18px;
+    
+  }
+  .account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
+    width: 80%;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .account-page .account-page__header h2:after{
+    border-bottom: none;
+  }
+  .account-page input[type='submit'] {
+    float: none;
+  }
+  .account-page .account-page__inner {
+    padding: 20px;
+  }
+  .account-page .btn {
+    margin-top: 20px;
+    color: #fff;
+    background-color: #ccc;
+    float: right;
+  }
+  .account-page .btn {
+    margin-left: 0px;
+  }
+  .account-page input[type='submit'] {
+    margin-right: 0px;
+    float: left;
+  }
+  .account-page .field .field-label{
+    text-align: left;
+  }
+  .account-page .account-page__header .btn {
+    margin-right: 15px;
+    margin-bottom: 20px;
+  }
+  
+  
+
+
+}
+ 
